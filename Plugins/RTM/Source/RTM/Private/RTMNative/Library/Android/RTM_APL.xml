@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LogicCore additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 初始化-->
+  <init>
+    <log text="RTM init"/>
+  </init>
+
+  <resourceCopies>
+    <copyFile  src = "$S(PluginDir)/RTMNative.aar"  dst = "$S(BuildDir)/libs/RTMNative.aar" /> 
+  </resourceCopies>
+
+  <!-- optional updates applied to AndroidManifest.xml -->
+  <androidManifestUpdates>
+    <log text="androidManifestUpdates begin" />
+
+    <log text="addPermission begin" />
+	<!-- TODO SDK接入必须权限模块 START -->
+    <addPermission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <addPermission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <!--Permission start-->
+    <addPermission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+	  <addPermission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	  <addPermission android:name="android.permission.RECORD_AUDIO"/>
+	  <addPermission android:name="android.permission.BLUETOOTH" />
+    <addPermission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!--Permission end-->
+  </androidManifestUpdates>
+
+  <buildGradleAdditions>
+    <insert>
+      android {
+        repositories{
+          flatDir{
+            dirs'src/main/libs'
+          }
+        }
+      }
+      dependencies {
+        implementation name:'RTMNative',ext:'aar'
+      }
+    </insert>
+  </buildGradleAdditions>
+
+</root>

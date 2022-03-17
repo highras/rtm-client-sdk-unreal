@@ -1,0 +1,6 @@
+framework module RTMNative {
+  umbrella header "RTMNative.h"
+
+  export *
+  module * { export * }
+}
