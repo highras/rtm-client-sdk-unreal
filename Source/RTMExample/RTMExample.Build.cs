@@ -8,6 +8,8 @@ public class RTMExample : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bEnableExceptions = true; 
+        bEnableUndefinedIdentifierWarnings = false;
+
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HTTP" });
 

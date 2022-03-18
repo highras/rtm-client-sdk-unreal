@@ -144,5 +144,5 @@ Please refer [Data Functions](Data.md)
 
 ### Error Codes
 
-[RTM SDK Error Codes](https://github.com/highras/rtm-client-sdk-unity/blob/master/Assets/Plugins/rtm/ErrorCode.cs)  
-[FPNN SDK (Transport Layer) Error Codes](https://github.com/highras/rtm-client-sdk-unity/blob/master/Assets/Plugins/fpnn/ErrorCode.cs)
+[RTM SDK Error Codes](https://github.com/highras/rtm-client-sdk-unreal/blob/main/Plugins/RTM/Source/RTM/Public/RTMErrorCode.h)  
+[FPNN SDK (Transport Layer) Error Codes](https://github.com/highras/rtm-client-sdk-unreal/blob/main/Plugins/FPNN/Source/FPNN/Include/x64/base/FpnnError.h)

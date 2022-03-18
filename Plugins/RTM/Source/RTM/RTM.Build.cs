@@ -32,7 +32,7 @@ public class RTM : ModuleRules
             PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "Private", "AudioConvert", "Library", "iOS", "libaudio-convert.a"));
             PrivateDependencyModuleNames.Add("AudioCaptureAudioUnit");
 
-            PublicAdditionalFrameworks.Add( new Framework( "RTMNative", Path.Combine(ModuleDirectory, "Private", "RTMNative", "Library", "iOS", "RTMNative.framework.zip"), "", true) );
+            PublicAdditionalFrameworks.Add( new Framework( "RTMNative", Path.Combine(ModuleDirectory, "Private", "RTMNative", "Library", "iOS", "RTMNative.framework.zip"), "") );
 			PublicFrameworks.AddRange(
                		new string[] {
 						"Foundation",

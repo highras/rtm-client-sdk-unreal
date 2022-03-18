@@ -21,7 +21,7 @@ namespace rtm
 		}
 		virtual void Stop()
 		{
-			//_thread.join();
+			_thread.join();
 		}
 		void Test()
 		{
