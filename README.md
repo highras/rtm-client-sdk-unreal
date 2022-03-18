@@ -4,11 +4,16 @@
 
 ## Usage
 
-### Init
+### Integration
 
-**Init MUST in the main thread.**
+* Copy all the content in `Plugins` folder to `Plugins` folder in your project.
 
-#### RTM SDK Init (REQUIRED)
+* Add the content below to [YourModule].Build.cs file. 
+  >bEnableExceptions = true;  
+  >bEnableUndefinedIdentifierWarnings = false;  
+  >PrivateDependencyModuleNames.AddRange(new string[] { "FPNN", "RTM" });
+
+### RTM SDK Init (REQUIRED)
 
 	#include "RTMControlCenter.h"
 	...
